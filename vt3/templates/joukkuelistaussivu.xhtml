@@ -1,0 +1,49 @@
+<!DOCTYPE xhtml>
+<html lang="fi" xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi">
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='tyylit.css') }}"/>
+        <meta charset="utf-8" />
+        <title>Tulospalvelu / joukkuelistaus</title>
+    </head>
+    <body id="body_jlist">
+
+    <div class="navigointi">
+    <a class="navigointi_a_elem" >{{kilpailu}}</a>
+    <a class="navigointi_a_elem" href="{{request.base_url}}/muokkaussivu">{{joukkue}}</a>
+    <a class="navigointi_a_elem" >Joukkuelistaus</a>
+    <a href="{{request.base_url}}/logoutsivu">Kirjaudu ulos</a>
+    </div>
+
+    <h1>Tervetuloa tulospalveluun</h1>
+    <p id="joukkueesi">Joukkueesi: {{joukkue}}</p>
+
+    <ul> {% for ind in data: %}
+        <li>{{ ind['sarjanimi'] }}
+            <ul>
+                <li>{{ ind['joukkuenimi'] }}
+                    {% if ind['jasenet'] != None %}
+                        <ul>{% for ind2 in ind['jasenet'] %}
+                            <li>{{ ind2 }}</li>
+                        {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p>Ei jäseniä</>
+                    {% endif %}
+                </li>
+           </ul>
+       </li>
+    {% endfor %}
+    </ul>
+
+    <br />
+<!-- Tästä eteenpäin on vain apuvälineenä käytettäviä skriptejä -->
+<!-- HTMLinspectoria käytetään sivun live-muutosten validointiin. Kannattaa
+vielä varmuuden vuoksi ajaa välillä myös W3C:n validaattori -->
+<script src="https://appro.mit.jyu.fi/tools/htmlinspector/html-inspector.js"></script>
+<!-- Sivun validoinnin W3C:n validaattorilla voit tehdä milloin tahansa näppäinyhdistelmällä CTRL+ALT+V -->
+<script src="https://appro.mit.jyu.fi/tools/validator/validator.user.js"></script>
+<script src="https://appro.mit.jyu.fi/tools/validator/xml-validator.js"></script>
+</body>
+</html>
+
+

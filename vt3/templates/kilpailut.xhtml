@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xhtml>
+<html>
+
+<head>
+  <title>Kilpailut</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='tyylit4.css') }}"/>
+</head>
+<body id="adm_sivu">
+
+<div class="navigointi">
+    <strong><a id="a2" href="http://jukkajo.eu.pythonanywhere.com/admin_esivu">Admin</a></strong>
+    <a class="a1">Kilpailut</a>
+    <a class="a1" href="http://jukkajo.eu.pythonanywhere.com/admin_esivu/sarjat">Sarjat</a>
+    <a class="a1" href="http://jukkajo.eu.pythonanywhere.com/admin_esivu/joukkueet">Joukkueet</a>
+    <a class="a1" href="http://jukkajo.eu.pythonanywhere.com/admin_esivu/joukkue">Joukkue</a>
+    <a class="a1" href="http://jukkajo.eu.pythonanywhere.com/admin_esivu/logoutsivu_adm">Logout</a>
+</div>
+
+<h2>Kilpailut</h2>
+<ul>
+    {% for i in kilpailut %}
+     <li><a href="http://jukkajo.eu.pythonanywhere.com/admin_esivu/{{ i['kisanimi'] }}">{{ i['kisanimi'] }}</a>  {{ i['alkuaika'].date() }}</li>
+    {% endfor %}
+</ul>
+</body>
+</html>

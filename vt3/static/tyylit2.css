@@ -1,0 +1,93 @@
+#m_form {
+    width: 24vw;
+    height: 55vh;
+}
+
+span {
+    color: light coral;
+}
+
+.navigointi {
+    background-color: rgb(51, 154, 240);
+    color: white;
+    padding-left: 0.5em;
+    z-index: 2;
+    height: 2.5em;
+    position: relative;
+
+}
+
+.m_vas {
+    height: 2.5em;
+}
+
+.p1 {
+    float: right;
+    display: inline;
+}
+
+.p1_1 {
+    float: right;
+    position: relative;
+}
+
+.p1_1_2 {
+    margin-top: 1em;
+    float: right;
+    position: relative;
+    margin-top: 1em;
+}
+
+.vra {
+    display: inline;
+    height: 4vh;
+}
+
+.vra2, .vra3, .vra4 {
+    display: inline;
+    height: 4vh;
+}
+
+.vra2 {
+    margin-left: 13.5em;
+}
+
+.vra3 {
+    margin-left: 15.5em;
+}
+
+.vra4 {
+    margin-left: 23em;
+}
+
+a {
+    line-height: 4.7vh;
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+#a1:link {
+  color: white;
+}
+
+#a1:visited {
+  color: purple;
+}
+
+#a1:hover {
+  color: rgb(255, 127, 80);
+  text-decoration: none;
+}
+
+#inp_tal_muut {
+    background-color: rgb(51, 154, 240);
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    height: 2em;
+    width: 9em;
+    left: 18.3vw;
+    margin-top: 21em;
+    position: absolute;
+}

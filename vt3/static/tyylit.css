@@ -1,0 +1,112 @@
+#form {
+    background-color: rgb(165, 216, 255);
+    float: left; margin-top: 1em;
+
+}
+
+#kirj_form_h1 {
+    margin-left: 0.8em;
+}
+
+#rajat {
+    background-color: white;
+    margin-left: 1em;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    width: 15vw;
+    padding: 1.5em;
+}
+
+#virhe {
+    position: absolute;
+    top: 5.7em;
+    left: 19.4vw;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    background-color: rgb(245, 42, 42);
+
+}
+
+#joukkueesi {
+    font-weight: 700;
+}
+
+#kirjaudu {
+    background-color: rgb(51, 154, 240);
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#sarja_va {
+    display: inline;
+}
+
+#kirjaudu {
+    margin-left: 4.5em;
+    height: 3em;
+    width: 13em;
+}
+
+#body_kirj {
+    background-color: rgb(165, 216, 255);
+    z-index: 1;
+}
+
+#body_jlist {
+    z-index: 1;
+}
+
+.kirj_form_h1 {
+    margin-left: 2em;
+}
+
+#kilpailun_valinta {
+    margin-left: 2.2em;
+}
+
+.kirj_label {
+    margin-left: 2.2em;
+    margin-top: 1.5em;
+    font-weight: 600;
+}
+
+.kirj_inp {
+ margin-left: 2.2em;
+ margin-top: 0.5em;
+ margin-bottom: 2em;
+ width: 17em;
+ height: 2.2em;
+}
+
+
+.navigointi {
+    background-color: rgb(51, 154, 240);
+    color: white;
+    padding-left: 0.5em;
+    z-index: 2;
+    height: 2.5em;
+    position: relative;
+
+}
+
+a {
+    line-height: 4.7vh;
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+#a1:link {
+  color: white;
+}
+
+#a1:visited {
+  color: purple;
+}
+
+#a1:hover {
+  color: rgb(255, 127, 80);
+  text-decoration: none;
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xhtml>
+<html lang="fi" xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi">
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='tyylit6.css') }}"/>
+        <meta charset="utf-8" />
+        <title>Muokkaus / ylläpito</title>
+    </head>
+    <body id="adm_sivu">
+    <div class="navigointi">
+        <strong><a id="a2" href="http://jukkajo.eu.pythonanywhere.com/admin_esivu">Admin</a></strong>
+        <a class="a1" href="http://jukkajo.eu.pythonanywhere.com/admin_esivu/kilpailut">Kilpailut</a>
+        <a class="a1" href="http://jukkajo.eu.pythonanywhere.com/admin_esivu/sarjat">Sarjat</a>
+        <a class="a1" href="http://jukkajo.eu.pythonanywhere.com/admin_esivu/joukkueet">Joukkueet</a>
+        <a class="a1">Joukkue</a>
+        <a class="a1" href="http://jukkajo.eu.pythonanywhere.com/admin_esivu/logoutsivu_adm">Logout</a>
+    </div>
+<form action="{{request.base_url}}" method="POST" >
+    {{ form.csrf_token }}
+    <div class="le_div">
+    <fieldset><legend>Tällä-></legend></fieldset>
+    <fieldset><legend>muokataan-></legend></fieldset>
+    <fieldset><legend><-joukkueiden</legend></fieldset>
+    <fieldset><legend>tietoja-></legend></fieldset>
+    </div>
+    <div id="sis">
+        <p>{{form.joukkueenpoisto.label}}{{ form.joukkueenpoisto }}</p><span id="ilmoitus">{{ilmoitus}}<br />{{jatko}}</span>
+        <p>{{form.j_nimi.label}}{{ form.j_nimi }}</p><span>{% for error in form.j_nimi.errors %} {{ error|e }} {% endfor %}</span>
+        <p>{{form.salasana.label}}{{ form.salasana }}</p><span>{% for error in form.salasana.errors %} <p id="rd">{{ error|e }}</p> {% endfor %}</span>
+        <p>{{form.sarja.label}}{{ form.sarja }}</p>
+        <p>Jäsenet</p>
+        <p>{{form.jas1.label}}{{ form.jas1 }}</p><span>{% for error in form.jas1.errors %} <p>{{ error|e }}</p> {% endfor %}</span>
+        <p>{{form.jas2.label}}{{ form.jas2 }}</p><span>{% for error in form.jas2.errors %} <p>{{ error|e }}</p> {% endfor %}</span>
+        <p>{{form.jas3.label}}{{ form.jas3 }}</p><span>{% for error in form.jas3.errors %} <p>{{ error|e }}</p> {% endfor %}</span>
+        <p>{{form.jas4.label}}{{ form.jas4 }}</p><span>{% for error in form.jas4.errors %} <p>{{ error|e }}</p> {% endfor %}</span>
+        <p>{{form.jas5.label}}{{ form.jas5 }}</p><span>{% for error in form.jas5.errors %} <p>{{ error|e }}</p> {% endfor %}</span>
+    <input id="uusij" type="submit" name="uusi" value="Tallenna" />
+    </div>
+</form>
+<!-- Tästä eteenpäin on vain apuvälineenä käytettäviä skriptejä -->
+<!-- HTMLinspectoria käytetään sivun live-muutosten validointiin. Kannattaa
+vielä varmuuden vuoksi ajaa välillä myös W3C:n validaattori -->
+<script src="https://appro.mit.jyu.fi/tools/htmlinspector/html-inspector.js"></script>
+<!-- Sivun validoinnin W3C:n validaattorilla voit tehdä milloin tahansa näppäinyhdistelmällä CTRL+ALT+V -->
+<script src="https://appro.mit.jyu.fi/tools/validator/validator.user.js"></script>
+<script src="https://appro.mit.jyu.fi/tools/validator/xml-validator.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE xhtml>
+<html lang="fi" xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi">
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='tyylit.css') }}"/>
+        <meta charset="utf-8" />
+        <title>Tulospalvelu / kirjaudu</title>
+    </head>
+    <body id="body_kirj">
+        <form id="form" action="{{request.base_url}}" method="POST">
+            {{ form.csrf_token }}
+            <h1 id="kirj_form_h1">Kirjaudu sisään</h1>
+
+            <div id="rajat">
+                <br />
+                <p class="kirj_label"><label for="kilpailun_valinta">Kilpailun valinta:</label></p>
+                <select name="kilpailun_valinta" id="kilpailun_valinta">
+                    {%for i in kilpailut:%}
+                    <option value="{{i['kisanimi']}}">{{i['kisanimi']}}</option>
+                    {% endfor %}
+                </select>
+                <p><label for="tunnus" class="kirj_label">Tunnus</label></p>
+                <p><input type="text" name="tunnus" id="tunnus" class="kirj_inp"/></p>
+                <p><label for="salasana" class="kirj_label">Salasana</label></p>
+                <p><input type="password" name="salasana" id="salasana" class="kirj_inp"/></p>
+                <p id="kirjaudu_p"><input type="submit" value="Kirjaudu sisään" id="kirjaudu"></input></p>
+                <br />
+            </div>
+        </form>
+        <p id="virhe">{{virhe}}</p>
+    <!-- Tästä eteenpäin on vain apuvälineenä käytettäviä skriptejä -->
+    <!-- HTMLinspectoria käytetään sivun live-muutosten validointiin. Kannattaa
+    vielä varmuuden vuoksi ajaa välillä myös W3C:n validaattori -->
+    <script src="https://appro.mit.jyu.fi/tools/htmlinspector/html-inspector.js"></script>
+    <!-- Sivun validoinnin W3C:n validaattorilla voit tehdä milloin tahansa näppäinyhdistelmällä CTRL+ALT+V -->
+    <script src="https://appro.mit.jyu.fi/tools/validator/validator.user.js"></script>
+    <script src="https://appro.mit.jyu.fi/tools/validator/xml-validator.js"></script>
+    </body>
+</html>

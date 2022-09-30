@@ -1,0 +1,114 @@
+body {
+    height: 100vh;
+}
+
+.navigointi {
+    background-color: rgb(255,127,80);
+    color: white;
+    padding-left: 0.5em;
+    z-index: 2;
+    height: 2.5em;
+    position: relative;
+
+}
+
+a {
+    line-height: 4.7vh;
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.a1:link {
+  color: white;
+}
+
+.a1:visited {
+  color: purple;
+}
+
+.a1:hover {
+  color: black;
+  text-decoration: none;
+}
+
+#a2 {
+  text-decoration: none;
+  color: black;
+}
+
+
+
+#ilmoitus {
+    color: green;
+    font-weight: 600;
+}
+
+#rd {
+    color: red;
+}
+
+.le_div {
+    z-index: 2;
+    position: relative;
+    width: 26.5vw;
+    height: 27vw;
+    margin-top: 1em;
+    margin-left: 0.5em;
+}
+
+@keyframes move {
+    100% {
+        margin-left: 14em;
+    }
+}
+
+fieldset{
+    position: absolute;
+    width: 26.5vw;
+    height: 27vw;
+    border: 11px solid transparent;
+    border-top-color: rgb(95,158,160);
+    top: 0em;
+    left: 0em;
+    bottom: 0em
+    right: 0em;
+    box-sizing: border-box;
+    z-index: 1;
+}
+legend{
+    z-index: 1;
+    padding: 0 10px;
+    margin-left: 0px;
+    animation: move 5s infinite linear alternate;
+    font-size: 18px;
+    font-weight: 600;
+    color: red;
+}
+
+fieldset:nth-of-type(2){
+    transform: rotate(90deg);
+}
+fieldset:nth-of-type(3){
+    transform: rotate(180deg);
+}
+fieldset:nth-of-type(3)>legend{
+    transform: rotate(180deg);
+}
+fieldset:nth-of-type(4){
+    transform: rotate(-90deg);
+}
+
+#sis {
+    z-index: 3;
+    position: absolute;
+    top: 9vh;
+    margin-left: 3.4em;
+}
+
+form {
+    margin-top: 1em;
+    margin-left: 1em;
+    width: 27vw;
+    height: 80vh;
+}

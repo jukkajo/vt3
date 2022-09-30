@@ -1,0 +1,6 @@
+{
+  "database": "jukkajo$kilpailut",
+  "user": "jukkajo",
+  "passwd": "ties4080",
+  "host":"jukkajo.mysql.eu.pythonanywhere-services.com"
+}
