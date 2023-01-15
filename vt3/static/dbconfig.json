@@ -1,6 +1,6 @@
 {
-  "database": "jukkajo$kilpailut",
+  "database": "",
   "user": "jukkajo",
-  "passwd": "ties4080",
-  "host":"jukkajo.mysql.eu.pythonanywhere-services.com"
+  "passwd": "",
+  "host":""
 }
